@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     [Header("Префабы зависимостей")]
     [SerializeField] private GameObject magicOrb;
     [SerializeField] private SceneAsset nextLevel;
-    private Text nutsCounter;
+    [SerializeField] private Text nutsCounter;
     private Image damageFX;
     private Slider hpBar;
     private float normalHeight;
@@ -50,7 +50,6 @@ public class Player : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        nutsCounter = GameObject.Find("NutsCounter").GetComponent<Text>();
         damageFX = GameObject.Find("DamageFX").GetComponent<Image>();
         hpBar = GameObject.Find("HP").GetComponent<Slider>();
         animator = GetComponent<Animation>();

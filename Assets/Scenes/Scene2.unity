@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 1052704055}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,6 +435,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4240674649074409162, guid: 2ad66f42b7b198d4ea8128c103a9547f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240674649074409162, guid: 2ad66f42b7b198d4ea8128c103a9547f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240674649970706823, guid: 2ad66f42b7b198d4ea8128c103a9547f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240674649970706823, guid: 2ad66f42b7b198d4ea8128c103a9547f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240674649970706823, guid: 2ad66f42b7b198d4ea8128c103a9547f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4554094971382657570, guid: 2ad66f42b7b198d4ea8128c103a9547f, type: 3}
       propertyPath: m_Name
       value: Player

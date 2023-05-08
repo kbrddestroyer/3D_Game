@@ -41,21 +41,23 @@ public class Goblin : MonoBehaviour
     {
         if (hp <= 0)
             Destroy(this.gameObject);
-
-        if (Vector3.Distance(transform.position, player.transform.position) < spotRadius && !hit)
-        {
-            agent.destination = player.transform.position;       
-        }
-
-        if (agent.hasPath)
-        {
-            float angle = Vector3.Angle(transform.forward, agent.destination - transform.position);
-            transform.Rotate(0, angle * Time.deltaTime * 2, 0);
-        }
         else
         {
-            hit = false;
-            agent.destination = transform.position + new Vector3(Random.Range(-2f, 2f), 0f, Random.Range(-2f, 2f));
+            if (Vector3.Distance(transform.position, player.transform.position) < spotRadius && !hit)
+            {
+                agent.destination = player.transform.position;
+            }
+
+            if (agent.hasPath)
+            {
+                float angle = Vector3.Angle(transform.forward, agent.destination - transform.position);
+                transform.Rotate(0, angle * Time.deltaTime * 2, 0);
+            }
+            else
+            {
+                hit = false;
+                agent.destination = transform.position + new Vector3(Random.Range(-2f, 2f), 0f, Random.Range(-2f, 2f));
+            }
         }
     }
 }
