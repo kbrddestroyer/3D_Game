@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField, Range(0f, 2f)]     private float crouchHeight;
     [Header("Префабы зависимостей")]
     [SerializeField] private GameObject magicOrb;
-    [SerializeField] private SceneAsset nextLevel;
+    [SerializeField] private string nextLevel;
     [SerializeField] private Text nutsCounter;
     private Image damageFX;
     private Slider hpBar;
@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
         nutsCounter.text = nuts.ToString() + '/' + maxNuts.ToString();
 
         if (nuts == maxNuts)
-            SceneManager.LoadScene(nextLevel.name);
+            SceneManager.LoadScene(nextLevel);
     }
 
     // Update is called once per frame
